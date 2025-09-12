@@ -17,7 +17,7 @@ function setup() {
   background(200,103,20);
  
 //object of interest
-  stroke(233,815,45,950);
+  stroke(233,815,45);
   fill(0,200,250,127);
   triangle(30,20,40,540,320,234);
 
