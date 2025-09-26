@@ -1,15 +1,15 @@
 /*
-Name: [Your Name]
-Title: SS3_[YourNameInitials] – "Underwater Bioluminescence"
+Jose Lopez
+"Underwater Bioluminescence"
 Instructions: 
 - Move your mouse across the screen to create glowing creatures. 
 - Click to release a burst of random bubbles. 
 - Press keys 1, 2, or 3 to change ocean moods (color themes).
-Description: 
-This sketch explores the theme of "Underwater Bioluminescence." 
-Creatures light up with random colors and behaviors depending on user interaction. 
-Conditional statements combined with randomness make each interaction 
-unpredictable—like strange sea creatures glowing in the deep ocean.
+
+'Creatures' will spawn in following your mouse and every time you click. 
+They will burst in random directions with differing sizes and color.
+Reminiscent of deep sea underwater animals.
+
 */
 
 let bgColor;
@@ -29,13 +29,13 @@ function draw() {
     creatures[i].display();
   }
 
-  // Instructions overlay
+  // Instructions
   fill(255, 200);
   textSize(14);
   text("Move mouse to spawn creatures | Click = burst bubbles | Keys 1-3 = change ocean mood", 20, height - 20);
 }
 
-// Creature object constructor
+// Creature object
 class Creature {
   constructor(x, y) {
     this.x = x;
