@@ -52,13 +52,6 @@ class Creature {
     this.x += this.speedX;
     this.y += this.speedY;
 
-    // Bounce off edges
-    if (this.x < 0 || this.x > width) {
-      this.speedX *= -1;
-    }
-    if (this.y < 0 || this.y > height) {
-      this.speedY *= -1;
-    }
   }
 
   display() {
