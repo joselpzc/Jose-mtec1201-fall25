@@ -30,7 +30,7 @@ function draw() {
   let g = random(0, 255);
   let b = random(0, 255);
 
-  // conditional statement for different shapes
+  //shapes changing depending on size
   if (size > 60) {
     fill(r, g, b, 150);
     ellipse(x, y, size, size);
