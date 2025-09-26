@@ -23,12 +23,6 @@ function setup() {
 function draw() {
   background(bgColor);
 
-  // Display and update all creatures
-  for (let i = 0; i < creatures.length; i++) {
-    creatures[i].move();
-    creatures[i].display();
-  }
-
   // Instructions
   fill(255, 200);
   textSize(14);
@@ -59,26 +53,7 @@ class Creature {
     fill(this.r, this.g, this.b, 150);
     ellipse(this.x, this.y, this.size);
 
-    // Conditional glow effect
-    if (this.size > 60) {
-      stroke(255, 200);
-      strokeWeight(2);
-      noFill();
-      ellipse(this.x, this.y, this.size + random(5, 20)); // glowing ring
-    } else if (this.size > 40) {
-      fill(255, 255, 150, 100);
-      ellipse(this.x + random(-5, 5), this.y + random(-5, 5), this.size / 2);
-    } else {
-      fill(200, 255, 255, 150);
-      rect(this.x, this.y, this.size / 2, this.size / 2);
-    }
   }
-}
-
-function mouseMoved() {
-  // Create new creatures when moving mouse
-  let c = new Creature(mouseX, mouseY);
-  creatures.push(c);
 }
 
 function mousePressed() {
