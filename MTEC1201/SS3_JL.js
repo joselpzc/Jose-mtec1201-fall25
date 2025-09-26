@@ -26,9 +26,9 @@ function draw() {
   size = random(20, 80);
 
   // random colors
-  let r = random(100, 255);
-  let g = random(100, 255);
-  let b = random(200, 255);
+  let r = random(0, 255);
+  let g = random(0, 255);
+  let b = random(0, 255);
 
   // conditional statement for different shapes
   if (size > 60) {
