@@ -23,7 +23,7 @@ function draw() {
   // shapes  follows the mouse
   x = mouseX;
   y = mouseY;
-  size = random(20, 80);
+  size = random(20, 120);
 
   // random colors
   let r = random(0, 255);
@@ -34,7 +34,7 @@ function draw() {
   if (size > 60) {
     fill(r, g, b, 150);
     ellipse(x, y, size, size);
-  } else if (size > 40) {
+  } else if (size < 60) {
     fill(r, g, b, 150);
     rect(x, y, size, size);
 
