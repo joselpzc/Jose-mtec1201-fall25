@@ -37,9 +37,7 @@ function draw() {
   } else if (size > 40) {
     fill(r, g, b, 150);
     rect(x, y, size, size);
-  } else {
-    fill(r, g, b, 150);
-    triangle(x, y, x + size, y, x + size / 2, y - size);
+
   }
 }
 
