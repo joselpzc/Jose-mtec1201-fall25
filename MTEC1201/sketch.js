@@ -1,6 +1,6 @@
 /*
 Name: Jose Lopez
-"Glowing Sea Creatures"
+"Glowing"
 Instructions:
 - Move your mouse and it will move with you.
 - Press keys 1, 2, or 3 to change the ocean color.
@@ -20,7 +20,7 @@ function setup() {
 function draw() {
   background(bgColor);
 
-  // creature follows the mouse
+  // shapes  follows the mouse
   x = mouseX;
   y = mouseY;
   size = random(20, 80);
@@ -41,20 +41,10 @@ function draw() {
     fill(r, g, b, 150);
     triangle(x, y, x + size, y, x + size / 2, y - size);
   }
-
-  // little text instruction
-  fill(255);
-  textSize(14);
-  text("Move mouse, click, or press 1-3", 20, height - 20);
 }
 
-function mousePressed() {
-  // click makes random bubbles
-    let bx = mouseX + random(-50, 50);
-    let by = mouseY + random(-50, 50);
-    let bsize = random(10, 30);
-    fill(200, 255, 255, 150);
-    ellipse(bx, by, bsize, bsize);
+function mousePressed(){
+  strokeWeight(random(0,15));
 }
 
 function keyPressed() {
