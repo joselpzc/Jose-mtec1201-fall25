@@ -57,6 +57,8 @@ image(angler, width / 4, height / 2, 150, 150);
   fill(255);
   textSize(16);
   text(`Startup time: ${round(ms, 2)} ms`, 5, 50);
+
+  //got from pj website
 }
 
 
