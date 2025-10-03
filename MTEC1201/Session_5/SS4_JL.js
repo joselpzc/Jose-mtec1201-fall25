@@ -1,3 +1,4 @@
+
 /*
 Name: Jose Lopez
 "Glowing"
@@ -11,35 +12,53 @@ They appear where you move the mouse, and change colors randomly.
 
 let bgColor;
 let x, y, size;
+let angler;
+let ms = millis();    
 
 function setup() {
   createCanvas(windowWidth, windowHeight);
+  imageMode(CENTER); 
+  
   bgColor = color(0, 30, 60);
+  
 }
+
+function preload() {
+  angler = loadImage('images/angler.png');
+}
+
 
 function draw() {
   background(bgColor);
 
-  // shapes  follows the mouse
+  // follow mouse
   x = mouseX;
   y = mouseY;
   size = random(20, y);
 
-  // random colors
+  // random color
   let r = random(0, 255);
   let g = random(0, 255);
   let b = random(0, 255);
 
-  //shapes changing depending on size
+image(angler, width / 4, height / 2, 150, 150);
+
+  // shapes
   if (size > 200) {
     fill(r, g, b, 150);
     ellipse(x, y, size, size);
-  } else if (size < y) {
+  } else {
     fill(r, g, b, 150);
     rect(x, y, size, size);
-
   }
+
+  // live time since start
+  let ms = millis();
+  fill(255);
+  textSize(16);
+  text(`Startup time: ${round(ms, 2)} ms`, 5, 50);
 }
+
 
 function mousePressed(){
   strokeWeight(random(0,15));
