@@ -24,6 +24,8 @@ let survivalTime = 0;
 //image
 function preload() {
   angler = loadImage('images/angler.png');
+  seaweed = loadImage('images/seaweed');
+  coral = loadImage('images/coral');
 }
 
 function setup() {
@@ -67,6 +69,8 @@ function playGame() {
   fish.add(dir);
 
   image(angler, fish.x, fish.y, 150, 150);
+  image(seaweed, 200, 200, 150, 150);
+  image(coral, 200, 600, 150, 150);
 
   // random glowing shape trail
   let size = random(20, 80);
