@@ -15,19 +15,19 @@ let bgColor;
 let player;
 let angler;
 let fish;
-let fish2;           //second fish
+let fish2;          
 let fishSpeed;
-let fishSpeed2 = 2;  // simple speed for second fish
+let fishSpeed2 = 2; 
 
 let gameState = "menu"; // "menu", "play", "level2", "gameOver"
 let startTime;
 let survivalTime = 0;
 let bubbles=[];
-let topScore = 0;  // FIXED typo
+let topScore = 0; 
 
 let seaweed, coral;
 
-//image
+//images
 function preload() {
   angler = loadImage('images/angler.png');
   seaweed = loadImage('images/seaweed1.png');
@@ -87,7 +87,7 @@ function playGame() {
 
   fishSpeed += 0.02;
 
-  // Update fish 1
+  //fish 1
   let dir = p5.Vector.sub(player, fish);
   dir.normalize();
   dir.mult(fishSpeed);
